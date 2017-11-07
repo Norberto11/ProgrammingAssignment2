@@ -30,10 +30,9 @@
 ## the inverse if the inverse has not been previously calculated. 
 ## The functions 'set', 'setinv' and 'getinv' works with 'x' and 'im' setup in a parent
 ## environment which is achieved using <<- and leaving the argument outside the functions 'get',
-## 'setinv' and 'getinv'. This way the value of 'x' and 'im' used by these functions are the ones 
-## of this second environment and not the main one.
+## 'setinv' and 'getinv'. 
 ## It is noticed the inverse of the matrix which is obtained through 'im' is initialized as 
-## NULL and changed through the function 'setinv'.
+## NULL and calculated by 'cacheSolve' the first time and set as cached for later calls.
 
 makeCacheMatrix <- function(x = matrix()) {
     im<-NULL #Initialize the inverse matrix as NULL
