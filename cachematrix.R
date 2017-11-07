@@ -3,10 +3,10 @@
 ## -----------------------------------------------------------------------------------------
 ## The function 'makeCacheMatrix' works along with 'cacheSolve'.
 ## To test the functions first a matrix needs to be created like the example below:
-## Ej. a<-matrix(data=c(2,3,4,5,6,7,8,0,1),nrow=3,ncol=3,byrow=TRUE)
+## Example: a<-matrix(data=c(2,3,4,5,6,7,8,0,1),nrow=3,ncol=3,byrow=TRUE)
 ## Then another function can be created (Ej, b) which is a parent function of 'makeCacheMatrix'
 ## and using the  matrix (a) as an argument. This function has the same attributes as
-## 'makeCacheMatrix'. Ej. b<-makeCacheMatrix(a). 
+## 'makeCacheMatrix'. Example: b<-makeCacheMatrix(a). 
 ##
 ## Note: the whole process can be performed directly with 'makeCacheMatrix'and placing the 
 ## matrix directly as argument, so:
