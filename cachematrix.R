@@ -4,12 +4,19 @@
 ## The function 'makeCacheMatrix' works along with 'cacheSolve'.
 ## To test the functions first a matrix needs to be created like the example below:
 ## Ej. a<-matrix(data=c(2,3,4,5,6,7,8,0,1),nrow=3,ncol=3,byrow=TRUE)
-## Then another function is created (Ej, b) which is a parent function of 'makeCacheMatrix'
+## Then another function can be created (Ej, b) which is a parent function of 'makeCacheMatrix'
 ## and using the  matrix (a) as an argument. This function has the same attributes as
-## 'makeCacheMatrix'. Ej. b<-makeCacheMatrix(a)
-## Then the function 'cacheSolve' can be executed using the new function (b) 
+## 'makeCacheMatrix'. Ej. b<-makeCacheMatrix(a). 
+##
+## Note: the whole process can be performed directly with 'makeCacheMatrix'and placing the 
+## matrix directly as argument, so:
+## makeCacheMatrix(matrix(data=c(2,3,4,5,6,7,8,0,1),nrow=3,ncol=3,byrow=TRUE)), however for 
+## testing purposes it was considered easier to simplified 'a' as the matrix and 'b' as the
+## makeCacheMatrix function.
+##
+## Then the function 'cacheSolve' can be executed using the new function 'b' 
 ## as argument and returning the inverse.
-## If this function (b) is called again to re-calculate the inverse, then the 
+## If this function 'b' is called again to re-calculate the inverse, then the 
 ## value of the inverse will be get from cached data through the function 'getinv'.
 ## As the variables set, get, setinv and getinv are defined as a list at the end of
 ## makeCacheMatrix, then these can be called using $ to either obtain the matrix, the inverse or
@@ -21,7 +28,7 @@
 ## This function also allowed to input a new matrix using 'set' function. The 'set' function is
 ## called from 'cacheSolve' to set a matrix and then using 'setinv' and 'getinv' to cache 
 ## the inverse if the inverse has not been previously calculated. 
-## The functions 'set', 'setinv' and 'getinv' works with 'x' and 'im' setup in a different
+## The functions 'set', 'setinv' and 'getinv' works with 'x' and 'im' setup in a parent
 ## environment which is achieved using <<- and leaving the argument outside the functions 'get',
 ## 'setinv' and 'getinv'. This way the value of 'x' and 'im' used by these functions are the ones 
 ## of this second environment and not the main one.
