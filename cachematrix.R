@@ -51,7 +51,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## an argument (Ej, matrix b). Then the inverse 'im' is returned calling 'getinv.
 ## 'cacheSolve' then verified if im is NULL or not, getting 'im' from 'getinv'. If NULL, then the
 ## inverse matrix 'im' is calculated using 'solve' function and cached using the function 'setinv', 
-## otherwise im is directly obtained from 'getinv' as cached and printing the message
+## otherwise 'im' is directly obtained from 'getinv' as cached and printing the message
 ## "getting cache data". 
 
 
